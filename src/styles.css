@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+.orange{
+  color: orange;
+}
+.red{
+  color:red;
+}
+.blue{
+  color:blue;
+}
+.violet{
+  color:violet;
+}
+.header-main{
+  display:flex;
+}
+.header-bar{
+  background: maroon;
+  margin: 0px;
+}
+
+.header-main-head{
+  color:white;
+  font: solid;
+}
+
+.header-navs{
+  color: white;
+}
+
+.font-ninjas{
+  font: white;
+}
+
+.remove{
+  cursor: pointer;
+}

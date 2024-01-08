@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myNinjaApp">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+    <link rel="stylesheet" type="text/css" href="src/styles.css">
+    <script src="/angular.min.js"></script>
+    <script src="/angular.route.min.js"></script>
+    <script src="/app/app.js"></script>
+    <title>Random</title>
+  </head>
+  
+  <body>
+    <div style="text-align: center;">
+      <h4>{{title}}</h4>
+      <p>This is the Random Ninja</p>
+      <img ng-src="ninjas[3].thumb">
+      <img ng-src="{{ninjas[3].name}}">
+    </div>
+    </body>
+</html>
