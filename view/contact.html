@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myNinjaApp">
   <head>
-    <title>Home</title>
+    <title>Contact</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <base href="/" />
     <link href="/src/styles.css" rel="stylesheet" type="text/css" />
@@ -14,10 +14,13 @@
   </head>
   <body>
     <ng-include src="'/src/header.html'"></ng-include>
-    <div>
-      <h1 style="text-align: center">Homepage</h1>
-      <random-ninja ninjas="ninjas" title="'Random Ninja'"></random-ninja>
-      <p style="text-align: center">Check out my random ninja!</p>
+    <div class="content">
+      <form name="ContactForm" novalidate>
+        <input type="text" placeholder="name" name="name" />
+        <input type="email" placeholder="Email" name="email" />
+        <textarea placeholder="Your message" name="message"></textarea>
+        <input type="submit" value="Send" />
+      </form>
     </div>
   </body>
 </html>
