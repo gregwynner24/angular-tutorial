@@ -2,19 +2,24 @@ var myNinjaApp = angular.module("myNinjaApp", ["ngRoute", "ngAnimate"]);
 
 myNinjaApp.config([
   "$routeProvider",
-  function ($routeProvider) {
+  "$locationProvider",
+  function ($routeProvider, $locationProvider) {
+    $locationProvider.html5Mode(true);
+
     $routeProvider
       .when("/home", {
-        templateUrl: "view/home.html",
-        controller: "NinjaController",
+        templateUrl: "/src/view/home.html",
       })
       .when("/contact", {
-        templateUrl: "view/contact.html",
-        controller: "NinjaController",
+        templateUrl: "./src/view/contact.html",
+        controller: "ContactController",
+      })
+      .when("/contact-success", {
+        templateUrl: "./src/view/contact-success.html",
+        controller: "ContactController",
       })
       .when("/directory", {
-        templateUrl: "view/directory.html",
-        controller: "NinjaController",
+        templateUrl: "./src/view/directory.html",
       })
       .otherwise({
         redirectTo: "/home",
@@ -34,7 +39,7 @@ myNinjaApp.directive("randomNinja", [
       /*template:
         '<div style="text-align:center;"><Img ng-src="{{ninjas[random].thumb}}" alt="Picture"></div>',*/
 
-      templateUrl: "./view/random.html",
+      templateUrl: "./src/view/random.html",
       transclude: true,
       replace: false,
       controller: function ($scope) {
@@ -91,5 +96,19 @@ myNinjaApp.controller("NinjaController", [
     available: true,
     thumb: "src/img/cm.png"
   }];*/
+  },
+]);
+
+/*----------------------------------
+ContactController -- contact.html
+----------------------------------*/
+
+myNinjaApp.controller("ContactController", [
+  "$scope",
+  "$location",
+  function ($scope, $location) {
+    $scope.sendMessage = function () {
+      $location.path("contact-success");
+    };
   },
 ]);

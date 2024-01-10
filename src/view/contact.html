@@ -13,10 +13,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
   </head>
   <body>
-    <ng-include src="'/src/header.html'"></ng-include>
-
     <div class="content">
-      <form name="contactForm" novalidate>
+      <form name="contactForm" ng-submit="sendMessage()" novalidate>
         <input
           type="text"
           placeholder="name"
@@ -47,13 +45,6 @@
           ng-model="contact.message"
           ng-required="true"
         ></textarea>
-        <div
-          ng-show="contactForm.message.$touched && contactForm.message.$invalid"
-        >
-          <small style="color: red; display: block; text-align: center"
-            >Enter a message</small
-          >
-        </div>
         <input type="submit" value="Send" ng-disabled="contactForm.$invalid" />
       </form>
     </div>

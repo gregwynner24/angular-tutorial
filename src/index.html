@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MyApp</title>
+    <title>Angular JS Tutorial Exercise</title>
     <base href="/" />
     <link href="/src/styles.css" rel="stylesheet" type="text/css" />
     <script src="/app/library/angular.js"></script>
@@ -14,18 +14,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
   </head>
 
-  <body ng-init="color='orange'">
-    <ng-include src="'/app/header.html'"></ng-include>
-
+  <body>
+    <header ng-include="'/src/header.html'"></header>
     <main ng-view></main>
-    <!--<div>
-      <input ng-model="inputText" placeholder="Insert text here">
-      <p class="orange">Your text is {{inputText}}</p>
-
-      <p class="red">color</p>
-      <p>Your text are {{groupText[0]}}, {{groupText[1]}}, and {{groupText[2]}}</p>
-    </div>-->
-    <app-root></app-root>
   </body>
 
   <!--<sidebar ng-init="navigs=['HOME','PROFILE','SALES','CONTACT', 'FEEDBACK']">
